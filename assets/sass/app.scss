@@ -1,6 +1,9 @@
 //Variable
 @import "helpers/variables";
 
+//Component
+@import "components/font";
+
 //Functions
 @import "helpers/functions";
 
@@ -15,3 +18,7 @@
 @import "components/navigation";
 @import "components/tables";
 @import "components/typography";
+@import "components/base";
+
+//Layouts
+@import "layouts/layout";

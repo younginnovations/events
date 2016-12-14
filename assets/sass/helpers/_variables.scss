@@ -6,8 +6,8 @@ $extra-large-screen: 1600px;
 
 //Color-palette
 $black: #66615B;
-$grey: #ccc;
-$light-grey: #d4d4d4;
+$grey: #8c8c8c;
+$light-grey: #ccc;
 $white: #fff;
 $yellow: #ff0;
 $green: #8bc34a;
@@ -17,15 +17,19 @@ $dark-pink: #e91e63;
 $purple: #9c27b0;
 $light-purple: #efedff;
 
+//Added color
+$light-black: #566166;
+$extra-light-grey: #f8f8f8;
+
 // Base-colors
-$base-color: $black;
-$brand-color: $blue;
+$base-color: $light-black;
+$brand-color: $orange;
 $secondary-color: $grey;
 $text_color: $base-color;
 $link_color: $dark-pink;
 
 //Body
-$main-background: $light-purple;
+$base-background: $light-grey;
 
 //Buttons
 //Buttons-Types
@@ -40,7 +44,10 @@ $button-padding-vertical: 10px;
 $button-padding-horizontal: 15px;
 
 // Typography
-$base-font-family: "Open Sans",san-serif;
+$font-Regular: "OpenSansRegular";
+$font-Light: "OpenSansLight";
+$font-Bold: "OpenSansBold";
+$base-font: $font-Regular;
 
 // Font Sizes
 $base-font-size: 14px;
@@ -62,3 +69,6 @@ $footer-background-color: #aaa;
 // Border
 $base-border-color: $base-color;
 $base-border: 1px solid $base-border-color;
+
+//Past-Event-Header
+$past-header-background: $extra-light-grey

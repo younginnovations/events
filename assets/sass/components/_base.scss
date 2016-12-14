@@ -1,0 +1,13 @@
+html,body {
+  height: 100%;
+}
+
+body {
+  background: $base-background;
+  font-family: $base-font , sans-serif;
+  color: $base-color;
+  font-size: 14px;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
