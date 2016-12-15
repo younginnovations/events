@@ -19,20 +19,15 @@ elixir(function (mix) {
             srcDir: 'public/css/'
         })
         .styles([
-            './assets/sass/vendor/normalize.css'
+            './assets/sass/vendor/normalize.css',
+            './assets/sass/vendor/carousel.css'
         ], 'public/css/vendor.css');
 
     mix.browserify('./assets/react-js/index.js', 'public/js')
         .scripts([
-            './assets/react-js/vendor/jquery-1.8.0.min.js',
-            './assets/react-js/vendor/modernizr-2.8.3.min.js'
+            './assets/react-js/vendor/modernizr-2.8.3.min.js',
+            './assets/react-js/vendor/jquery.imagesloaded.min.js',
+            './assets/react-js/vendor/bg-slideshow.min.js'
         ], 'public/js/vendor.js');
-
-    // mix.react({
-    //     proxy: 'events.valet/',
-    //     inputFiles: [
-    //         '/assets/react-js/index.js'
-    //     ]
-    // });
 });
 

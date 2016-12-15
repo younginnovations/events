@@ -1,10 +1,13 @@
 .section-slider {
   position: relative;
-  background-image: radial-gradient(circle at 50% 0, rgba(255, 196, 34, 0.78), rgba(255, 85, 0, 0.78));
+  height: 100vh;
+  > div {
+    height: 100%;
+  }
   .container {
     position: absolute;
     transform: translateY(-50%);
-    top: 50%;
+    top: 40%;
     left: 0;
     right: 0;
     text-align: center;
@@ -22,13 +25,26 @@
     }
   }
   .date-block {
-    max-width: 90px;
-    height: 84px;
+    max-width: 110px;
+    width: 100%;
+    height: 105px;
     margin: 0 auto;
     border: 10px solid #fff;
     position: relative;
     color: $white;
+    display: inline-block;
     font-family: $font-Bold;
+    &:nth-of-type(2) {
+      margin-left: 60px;
+      &:before {
+        content: '.......';
+        color: #fff;
+        display: block;
+        position: absolute;
+        left: -55px;
+        top: 40%;
+      }
+    }
     > div {
       position: absolute;
       top: 50%;
@@ -52,4 +68,51 @@
       }
     }
   }
+  .text {
+    font-size: 16px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.69);
+    margin: 25px 0 0;
+    text-transform: initial;
+  }
+
+  .ghost-button {
+    margin-top: 30px;
+  }
+
+  .button {
+    @include button-size(15px,38px,16px,1.2,0px);
+    border-color: #fff;
+    color: #fff;
+  }
 }
+
+.carousel {
+  &.carousel-slider, .slider {
+    height: 100%;
+  }
+  .slide {
+    background: #bf8b38;
+    > figure {
+      height: 100%;
+      > div {
+        background-image: radial-gradient(circle at 50% 0, rgba(255, 196, 34, 0.78), rgba(255, 85, 0, 0.78));
+        height: 100%;
+        img {
+          opacity: 0.22;
+        }
+      }
+    }
+  }
+}
+
+.slider-wrapper.axis-horizontal {
+  height: 100%;
+}
+
+@media only screen and (min-width: 960px) {
+  .carousel .control-dots {
+    bottom: 70px;
+  }
+}
+
