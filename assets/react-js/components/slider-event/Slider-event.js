@@ -17,7 +17,7 @@ class SliderEvent extends React.Component {
                                 <div className="date-block-wrap">
                                     <DateBlock/>
                                     <DateBlock/>
-                                    <p className="text">Other details yet to be decided</p>
+                                    <p className="text text-light">Other details yet to be decided</p>
                                     <div className="ghost-button">
                                         <button className="button button-border">View event in detail</button>
                                     </div>
