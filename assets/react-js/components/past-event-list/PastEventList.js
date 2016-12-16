@@ -5,7 +5,7 @@ import PastEventBlock from '../past-event-block/PastEventBlock';
 class PastEventList extends React.Component{
     render(){
         return(
-            <div className="past-event-list">
+            <div className="past-event__list">
                 <Year />
                 <PastEventBlock />
             </div>

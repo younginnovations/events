@@ -3,7 +3,7 @@ import React from 'react';
 class Year extends React.Component{
     render(){
         return(
-            <div className="year">
+            <div className="past-event__year">
                 2016
             </div>
         )

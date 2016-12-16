@@ -24,67 +24,6 @@
       }
     }
   }
-  .date-block {
-    max-width: 110px;
-    width: 100%;
-    height: 105px;
-    margin: 0 auto;
-    border: 10px solid #fff;
-    position: relative;
-    color: $white;
-    display: inline-block;
-    font-family: $font-Bold;
-    &:nth-of-type(2) {
-      margin-left: 60px;
-      &:before {
-        content: '.......';
-        color: #fff;
-        display: block;
-        position: absolute;
-        left: -55px;
-        top: 40%;
-      }
-    }
-    > div {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-      right: 0;
-      > span {
-        display: block;
-        border-bottom: 4px solid #fff;
-        padding-bottom: 2px;
-      }
-    }
-  }
-  .date {
-    span {
-      border-bottom: 0;
-      &:first-child {
-        display: block;
-        font-size: 42px;
-        line-height: 40px;
-      }
-    }
-  }
-  .text {
-    font-size: 16px;
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.69);
-    margin: 25px 0 0;
-    text-transform: initial;
-  }
-
-  .ghost-button {
-    margin-top: 30px;
-  }
-
-  .button {
-    @include button-size(15px,38px,16px,1.2,0px);
-    border-color: #fff;
-    color: #fff;
-  }
 }
 
 .carousel {

@@ -1,13 +1,16 @@
 import React from 'react';
-import PastEventImage from '../past-event-image/PastEventImage';
-import PastEventSummary from '../past-event-summary/PastEventSummary';
+import PastEventBlockList from '../past-event-block-list/PastEventBlockList';
 
 class PastEventBlock extends React.Component {
     render() {
         return (
-            <div className="past-event-block">
-                <PastEventImage />
-                <PastEventSummary />
+            <div className="past-event__block">
+                <PastEventBlockList />
+                <PastEventBlockList />
+                <PastEventBlockList />
+                <PastEventBlockList />
+                <PastEventBlockList />
+                <PastEventBlockList />
             </div>
         )
     }
