@@ -1,33 +1,12 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 
 const arrowScroll = () => {
-    //this is where we apply opacity to the arrow
-    $(window).scroll( function(){
-        //get scroll position
-        var topWindow = $(window).scrollTop();
-        //multipl by 1.5 so the arrow will become transparent half-way up the page
-        var topWindow = topWindow * 1.5;
-
-        //get height of window
-        var windowHeight = $(window).height();
-
-        //set position as percentage of how far the user has scrolled
-        var position = topWindow / windowHeight;
-        //invert the percentage
-        position = 1 - position;
-
-        //define arrow opacity as based on how far up the page the user has scrolled
-        //no scrolling = 1, half-way up the page = 0
-        $('.arrow-wrap').css('opacity', position);
-
-    });
-
-//Code stolen from css-tricks for smooth scrolling:
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    //Code stolen from css-tricks for smooth scrolling:
+    $(function () {
+        $('a[href*=#]:not([href=#])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     $('html,body').animate({
                         scrollTop: target.offset().top
@@ -39,12 +18,13 @@ const arrowScroll = () => {
     });
 };
 
-class BannerArrow extends Component{
-    componentDidMount(){
+class BannerArrow extends Component {
+    componentDidMount() {
         arrowScroll();
     }
-    render(){
-        return(
+
+    render() {
+        return (
             <div className="banner-arrow-block">
                 <div className="banner-arrow-block__inner">
                     <p>upcoming events</p>

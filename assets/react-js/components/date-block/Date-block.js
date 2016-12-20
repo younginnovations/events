@@ -1,18 +1,20 @@
-import React from 'react';
+import React from "react";
 
-class DateBlock extends React.Component{
-    render(){
-        return(
+const DateBlock = ({day, month, year}) => {
+    if(day && month && year){
+        return (
             <div className="date-block">
                 <div>
-                    <span className="month">March</span>
+                    <span className="month">{month}</span>
                     <div className="date">
-                        <span>04</span>
-                        <span>2017</span>
+                        <span>{day}</span>
+                        <span>{year}</span>
                     </div>
                 </div>
             </div>
         )
     }
-}
+    return null
+};
+
 export default DateBlock;

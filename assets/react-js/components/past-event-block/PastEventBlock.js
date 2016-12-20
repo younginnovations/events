@@ -5,6 +5,9 @@ class PastEventBlock extends React.Component {
     render() {
         return (
             <div className="past-event__block">
+                {/*{this.props.events.map(event => {*/}
+                    {/*return <PastEventBlockList event={event} key={event.SN}/>*/}
+                {/*})}*/}
                 <PastEventBlockList />
                 <PastEventBlockList />
                 <PastEventBlockList />

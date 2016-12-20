@@ -1,6 +1,8 @@
 .section-slider {
+  background-color: #cb9d2e;
   position: relative;
   height: 100vh;
+  transition: all 0.5s linear;
   > div {
     height: 100%;
   }
