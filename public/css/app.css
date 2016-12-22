@@ -1385,19 +1385,21 @@ body {
   overflow: hidden;
 }
 
+.past-event__list {
+  text-align: center;
+}
+
 .past-event__year {
-  font: normal 200px "OpenSansBold";
   color: rgba(255, 255, 255, 0.2);
+  font: normal 100px "OpenSansBold";
   margin-left: -24px;
 }
 
 .past-event__block {
-  margin-top: -80px;
+  margin-top: -44px;
 }
 
 .past-event__blocklist {
-  display: -webkit-box;
-  display: flex;
   margin-bottom: 72px;
 }
 
@@ -1416,8 +1418,9 @@ body {
 }
 
 .past-event__image {
-  width: 50vw;
   background-color: #bf8b38;
+  overflow: hidden;
+  position: relative;
 }
 
 .past-event__image picture {
@@ -1431,21 +1434,19 @@ body {
 }
 
 .past-event__summary {
-  display: -webkit-box;
-  display: flex;
+  margin-top: -168px;
   padding-right: 40px;
-  margin: 36px 0 0 -190px;
-  width: 50vw;
+  position: relative;
 }
 
 .past-event__summary h2 {
-  font: 42px "OpenSansBold";
   color: #fff;
+  font: 24px "OpenSansBold";
   margin: 0;
 }
 
 .past-event__summary .date-block {
-  margin-top: 12px;
+  margin: 12px 0 8px;
 }
 
 .past-event__info {
@@ -1458,6 +1459,69 @@ body {
 
 .past-event__info .ghost-button {
   margin-top: 20px;
+}
+
+@media all and (min-width: 420px) {
+  .past-event__image {
+    height: 240px;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .past-event__image {
+    height: 290px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .past-event__list {
+    text-align: left;
+  }
+  .past-event__year {
+    font: normal 200px "OpenSansBold";
+  }
+  .past-event__image {
+    height: 330px;
+    width: 60vw;
+  }
+  .past-event__block {
+    margin-top: -80px;
+  }
+  .past-event__blocklist {
+    display: -webkit-box;
+    display: flex;
+  }
+  .past-event__summary {
+    display: -webkit-box;
+    display: flex;
+    margin: 36px 0 0 -190px;
+    width: 70vw;
+  }
+  .past-event__summary h2 {
+    font: 30px "OpenSansBold";
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 900px) {
+  .past-event__image picture img {
+    height: 100%;
+    max-width: inherit !important;
+  }
+}
+
+@media all and (min-width: 900px) {
+  .past-event__summary {
+    width: 50vw;
+  }
+  .past-event__summary h2 {
+    font: 42px/50px "OpenSansBold";
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .past-event__summary {
+    width: 60vw;
+  }
 }
 
 .fixed-gradient {
@@ -1524,7 +1588,8 @@ body {
 
 .text {
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 20px;
   font-style: italic;
   margin: 25px 0 0;
   text-transform: initial;
@@ -1539,16 +1604,40 @@ body {
 }
 
 .ghost-button .button {
-  padding: 15px 38px;
-  font-size: 16px;
+  padding: 13px 26px;
+  font-size: 14px;
   line-height: 1.2;
   border-radius: 0px;
   border-color: #fff;
   color: #fff;
 }
 
+@media all and (min-width: 900px) {
+  .text {
+    font-size: 16px;
+  }
+  .ghost-button .button {
+    padding: 15px 38px;
+    font-size: 16px;
+    line-height: 1.2;
+    border-radius: 0px;
+  }
+}
+
 /*# sourceMappingURL=app.css.map */
 
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
 /*# sourceMappingURL=app.css.map */
 /*# sourceMappingURL=app.css.map */
 /*# sourceMappingURL=app.css.map */

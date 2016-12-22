@@ -46,7 +46,8 @@
 
 .text {
   color: $white;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 20px;
   font-style: italic;
   margin: 25px 0 0;
   text-transform: initial;
@@ -59,10 +60,19 @@
 .ghost-button {
   margin-top: 30px;
   .button {
-    @include button-size(15px, 38px, 16px, 1.2, 0px);
+    @include button-size(13px, 26px, 14px, 1.2, 0px);
     border-color: $white;
     color: $white;
   }
 }
 
+@media all and (min-width: 900px) {
+  .text {
+    font-size: 16px;
+  }
+
+  .ghost-button .button {
+    @include button-size(15px, 38px, 16px, 1.2, 0px);
+  }
+}
 
