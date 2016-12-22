@@ -4,18 +4,21 @@
   overflow: hidden;
 }
 
+.past-event__list {
+  text-align: center;
+}
+
 .past-event__year {
-  font: normal 200px $font-Bold;
   color: rgba($white, 0.2);
+  font: normal 100px $font-Bold;
   margin-left: -24px;
 }
 
 .past-event__block {
-  margin-top: -80px;
+  margin-top: -44px;
 }
 
 .past-event__blocklist {
-  display: flex;
   margin-bottom: 72px;
   &:nth-of-type(2n) {
     flex-direction: row-reverse;
@@ -29,8 +32,9 @@
 }
 
 .past-event__image {
-  width: 50vw;
   background-color: #bf8b38;
+  overflow: hidden;
+  position: relative;
   picture {
     background-image: radial-gradient(circle at 50% 0, rgba(255, 196, 34, 0.78), rgba(255, 85, 0, 0.78));
     img {
@@ -42,17 +46,16 @@
 
 //summary
 .past-event__summary {
-  display: flex;
+  margin-top: -168px;
   padding-right: 40px;
-  margin: 36px 0 0 -190px;
-  width: 50vw;
+  position: relative;
   h2 {
-    font: 42px $font-Bold;
     color: $white;
+    font: 24px $font-Bold;
     margin: 0;
   }
   .date-block {
-    margin-top: 12px;
+    margin: 12px 0 8px;
   }
 }
 
@@ -66,3 +69,68 @@
   }
 }
 
+@media all and (min-width: 420px) {
+  .past-event__image {
+    height: 240px;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .past-event__image {
+    height: 290px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .past-event__list {
+    text-align: left;
+  }
+
+  .past-event__year {
+    font: normal 200px $font-Bold;
+  }
+
+  .past-event__image {
+    height: 330px;
+    width: 60vw;
+  }
+
+  .past-event__block {
+    margin-top: -80px;
+  }
+
+  .past-event__blocklist {
+    display: flex;
+  }
+
+  .past-event__summary {
+    display: flex;
+    margin: 36px 0 0 -190px;
+    width: 70vw;
+    h2 {
+      font: 30px $font-Bold;
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 900px) {
+  .past-event__image picture img {
+    height: 100%;
+    max-width: inherit !important;
+  }
+}
+
+@media all and (min-width: 900px) {
+  .past-event__summary {
+    width: 50vw;
+    h2 {
+      font: 42px/50px $font-Bold;
+    }
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .past-event__summary {
+    width: 60vw;
+  }
+}
