@@ -29,13 +29,13 @@ class Main extends React.Component {
 
     upcomingEvents(){
         return this.state.events.filter(event => {
-           return moment(`${event.StartYear}-${event.StartMonth}-${event.StartDay}`, 'YYYY-MMM-D').format('Y-M-D') >= moment().format('Y-M-D');
+           return moment(`${event.StartYear}-${event.StartMonth}-${event.StartDay}`, 'YYYY-MMM-D') >= moment();
         });
     }
 
     pastEvents(){
         return this.state.events.filter(event => {
-            return moment(`${event.StartYear}-${event.StartMonth}-${event.StartDay}`, 'YYYY-MMM-D').format('Y-M-D') < moment().format('Y-M-D');
+            return moment(`${event.StartYear}-${event.StartMonth}-${event.StartDay}`, 'YYYY-MMM-D') < moment();
         });
     }
 

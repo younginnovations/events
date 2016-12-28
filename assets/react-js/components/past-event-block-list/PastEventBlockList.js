@@ -6,8 +6,8 @@ class PastEventBlockList extends React.Component {
     render() {
         return (
             <div className="past-event__blocklist">
-                <PastEventImage />
-                <PastEventSummary />
+                <PastEventImage event={this.props.event}/>
+                <PastEventSummary event={this.props.event} />
             </div>
         )
     }
