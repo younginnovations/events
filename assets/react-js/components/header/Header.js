@@ -17,7 +17,7 @@ const stickyHeader = () => {
 
 class Header extends React.Component{
     componentDidMount() {
-        stickyHeader();
+        // stickyHeader();
     }
     render(){
         return(

@@ -6,8 +6,8 @@ class PastEventSummary extends React.Component{
     render(){
         return(
             <div className="past-event__summary">
-                <DateBlock />
-                <PastEventInfo />
+                <DateBlock day={this.props.event.StartDay} month={this.props.event.StartMonth} year={this.props.event.StartYear}/>
+                <PastEventInfo event={this.props.event}/>
             </div>
         )
     }

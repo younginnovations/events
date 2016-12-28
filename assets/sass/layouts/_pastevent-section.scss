@@ -2,6 +2,8 @@
   background: $past-event-section-background;
   padding-top: 30px;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap-reverse;
 }
 
 .past-event__list {

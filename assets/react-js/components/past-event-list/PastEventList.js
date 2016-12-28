@@ -6,10 +6,8 @@ class PastEventList extends React.Component{
     render(){
         return(
             <div className="past-event__list">
-                {/*<Year year={this.props.year}/>*/}
-                <Year />
-                {/*<PastEventBlock events={this.props.events}/>*/}
-                <PastEventBlock />
+                <Year year={this.props.year}/>
+                <PastEventBlock events={this.props.events}/>
             </div>
         )
     }
