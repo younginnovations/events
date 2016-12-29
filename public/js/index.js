@@ -858,6 +858,7 @@ var PastEventSummary = function (_React$Component) {
                 'div',
                 { className: 'past-event__summary' },
                 _react2.default.createElement(_DateBlock2.default, { day: this.props.event.StartDay, month: this.props.event.StartMonth, year: this.props.event.StartYear }),
+                _react2.default.createElement(_DateBlock2.default, { day: this.props.event.EndDay, month: this.props.event.EndMonth, year: this.props.event.EndYear }),
                 _react2.default.createElement(_PastEventInfo2.default, { event: this.props.event })
             );
         }
