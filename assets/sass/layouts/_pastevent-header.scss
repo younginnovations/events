@@ -22,9 +22,14 @@
         position: absolute;
         top: 3px;
         left: -20px;
-        background-image: url('../img/sprite/history.svg');
-        background-position: -12px 0;
+        background: url('../img/history.svg') no-repeat;
       }
+    }
+  }
+  a {
+    color: #556166;
+    &:hover, &:focus {
+      color: darken(#556166, 10%);
     }
   }
 }

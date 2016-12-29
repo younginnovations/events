@@ -16,7 +16,7 @@ class PastEventSection extends React.Component {
 
     render() {
         return (
-            <section className="past-event section">
+            <section className="past-event section" id="past-section">
                 {this.pastEventLists()};
             </section>
         )

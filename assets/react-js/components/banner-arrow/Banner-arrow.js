@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 
 const arrowScroll = () => {
-    //Code stolen from css-tricks for smooth scrolling:
+    //From css-tricks for smooth scrolling:
     $(function () {
-        $('a[href*=#]:not([href=#])').click(function () {
+        $('a.arrow-wrap[href*=#]:not([href=#]),a.arrow-past-wrap[href*=#]:not([href=#])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -27,12 +27,12 @@ class BannerArrow extends Component {
         return (
             <div className="banner-arrow-block">
                 <div className="banner-arrow-block__inner">
-                    <p>upcoming events</p>
-                </div>
-                <div className="arrow bounce">
-                    <a className="arrow-wrap" href="#content">
-                        <span className="arrow"></span>
-                    </a>
+                    <div className="arrow-block">
+                        <a className="arrow-wrap" href="#content">
+                            <p>upcoming events</p>
+                            <span className="arrow-icon"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
         )
