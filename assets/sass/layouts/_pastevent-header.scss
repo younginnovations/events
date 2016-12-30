@@ -6,7 +6,7 @@
   background: $past-header-background;
   box-shadow: 0 -2px 40px 0 rgba(0, 0, 0, 0.5);
   padding: 22px 30px;
-  z-index: 5;
+  z-index: 4;
   @include e('inner') {
     font-family: $font-Bold;
     text-align: right;

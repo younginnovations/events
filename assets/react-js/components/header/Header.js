@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../logo/Logo';
 import BannerArrow from '../banner-arrow/Banner-arrow';
+import {Loader} from '../../utils/helpers'
 
 const stickyHeader = () => {
     $(function(){
@@ -18,10 +19,12 @@ const stickyHeader = () => {
 class Header extends React.Component{
     componentDidMount() {
         stickyHeader();
+        Loader.show('#main-loader');
     }
     render(){
         return(
             <section className="section-banner section">
+                <div id="main-loader"></div>
                 <Logo />
                 <BannerArrow/>
             </section>
