@@ -96,7 +96,6 @@ var Main = function (_React$Component) {
                 "div",
                 { className: "main-wrapper__inner" },
                 _react2.default.createElement(_Header2.default, null),
-                _react2.default.createElement(_PastEventHeader2.default, null),
                 _react2.default.createElement(_SliderEvent2.default, { events: this.upcomingEvents() }),
                 _react2.default.createElement(_PastEventSection2.default, { events: this.pastEvents() }),
                 _react2.default.createElement(_FixedGradient2.default, null)
@@ -312,6 +311,10 @@ var _BannerArrow2 = _interopRequireDefault(_BannerArrow);
 
 var _helpers = require('../../utils/helpers');
 
+var _PastEventHeader = require('../past-event-header/PastEventHeader');
+
+var _PastEventHeader2 = _interopRequireDefault(_PastEventHeader);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -322,14 +325,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var stickyHeader = function stickyHeader() {
     $(function () {
-        $(window).scroll(function () {
-            var winTop = $(window).scrollTop();
-            if (winTop >= 100) {
+        var sectionBannerTop = $('.section-banner').offset().top;
+
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop() > sectionBannerTop) {
                 $("body").addClass("sticky-header");
             } else {
                 $("body").removeClass("sticky-header");
-            } //if-else
-        }); //win func.
+            }
+        });
     }); //ready func.
 };
 
@@ -356,7 +360,8 @@ var Header = function (_React$Component) {
                 { className: 'section-banner section' },
                 _react2.default.createElement('div', { id: 'main-loader' }),
                 _react2.default.createElement(_Logo2.default, null),
-                _react2.default.createElement(_BannerArrow2.default, null)
+                _react2.default.createElement(_BannerArrow2.default, null),
+                _react2.default.createElement(_PastEventHeader2.default, null)
             );
         }
     }]);
@@ -366,7 +371,7 @@ var Header = function (_React$Component) {
 
 exports.default = Header;
 
-},{"../../utils/helpers":19,"../banner-arrow/Banner-arrow":2,"../logo/Logo":6,"react":335}],6:[function(require,module,exports){
+},{"../../utils/helpers":19,"../banner-arrow/Banner-arrow":2,"../logo/Logo":6,"../past-event-header/PastEventHeader":9,"react":335}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -545,6 +550,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var pastEventScroll = function pastEventScroll() {
+    $(function () {
+        $(".arrow-past-wrap").click(function () {
+            $(".past-event-header").animate({
+                top: "40"
+            }, 1000);
+        });
+    });
+};
+
 var PastEventHeader = function (_React$Component) {
     _inherits(PastEventHeader, _React$Component);
 
@@ -555,6 +570,11 @@ var PastEventHeader = function (_React$Component) {
     }
 
     _createClass(PastEventHeader, [{
+        key: "componentDidMount",
+        value: function componentDidMount() {
+            pastEventScroll();
+        }
+    }, {
         key: "render",
         value: function render() {
             return _react2.default.createElement(
