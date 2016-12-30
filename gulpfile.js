@@ -2,7 +2,6 @@
 
 var elixir = require('laravel-elixir');
 require('laravel-elixir-postcss');
-var sprite = require('postcss-sprites');
 
 elixir(function (mix) {
     mix.sass('./assets/sass/app.scss')
@@ -10,10 +9,6 @@ elixir(function (mix) {
             plugins: [
                 require('lost'),
                 require('rucksack-css'),
-                sprite({
-                    stylesheetPath: './public/css/',
-                    spritePath: './public/img/sprite/'
-                })
             ],
             output: 'public/css',
             srcDir: 'public/css/'

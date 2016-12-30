@@ -131,9 +131,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var arrowScroll = function arrowScroll() {
-    //Code stolen from css-tricks for smooth scrolling:
+    //From css-tricks for smooth scrolling:
     $(function () {
-        $('a[href*=#]:not([href=#])').click(function () {
+        $('a.arrow-wrap[href*=#]:not([href=#]),a.arrow-past-wrap[href*=#]:not([href=#])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -172,18 +172,18 @@ var BannerArrow = function (_Component) {
                     'div',
                     { className: 'banner-arrow-block__inner' },
                     _react2.default.createElement(
-                        'p',
-                        null,
-                        'upcoming events'
-                    )
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'arrow bounce' },
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'arrow-wrap', href: '#content' },
-                        _react2.default.createElement('span', { className: 'arrow' })
+                        'div',
+                        { className: 'arrow-block' },
+                        _react2.default.createElement(
+                            'a',
+                            { className: 'arrow-wrap', href: '#content' },
+                            _react2.default.createElement(
+                                'p',
+                                null,
+                                'upcoming events'
+                            ),
+                            _react2.default.createElement('span', { className: 'arrow-icon' })
+                        )
                     )
                 )
             );
@@ -343,7 +343,7 @@ var Header = function (_React$Component) {
     _createClass(Header, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            // stickyHeader();
+            stickyHeader();
         }
     }, {
         key: 'render',
@@ -381,27 +381,31 @@ var Logo = function Logo() {
         { className: "logo-block" },
         _react2.default.createElement(
             "div",
-            { className: "logo-block__inner" },
+            null,
             _react2.default.createElement(
-                "span",
-                null,
-                "ev",
+                "div",
+                { className: "logo-block__inner" },
                 _react2.default.createElement(
-                    "strong",
+                    "span",
                     null,
-                    "e"
-                ),
-                "nts"
-            )
-        ),
-        _react2.default.createElement(
-            "p",
-            { className: "logo-block__sub-title" },
-            "by ",
+                    "ev",
+                    _react2.default.createElement(
+                        "strong",
+                        null,
+                        "e"
+                    ),
+                    "nts"
+                )
+            ),
             _react2.default.createElement(
-                "span",
-                null,
-                "YoungInnovations"
+                "p",
+                { className: "logo-block__sub-title" },
+                "by ",
+                _react2.default.createElement(
+                    "span",
+                    null,
+                    "YoungInnovations"
+                )
             )
         )
     );
@@ -556,9 +560,13 @@ var PastEventHeader = function (_React$Component) {
                     "div",
                     { className: "past-event-header__inner" },
                     _react2.default.createElement(
-                        "span",
-                        { className: "icon" },
-                        "Past events"
+                        "a",
+                        { className: "arrow-past-wrap", href: "#past-section" },
+                        _react2.default.createElement(
+                            "span",
+                            { className: "icon" },
+                            "Past events"
+                        )
                     )
                 )
             );
@@ -801,7 +809,7 @@ var PastEventSection = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 "section",
-                { className: "past-event section" },
+                { className: "past-event section", id: "past-section" },
                 this.pastEventLists(),
                 ";"
             );
