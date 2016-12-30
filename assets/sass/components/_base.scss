@@ -21,6 +21,9 @@ body {
           margin-left: -90%;
         }
       }
+      .arrow-wrap .arrow-icon {
+        transform: translateY(-28px) rotate(135deg)
+      }
       .logo-block {
         @include e('inner'){
           border: solid 6px #556166;
@@ -38,11 +41,9 @@ body {
     }
     .section-slider {
       height: 90vh;
-      padding-top: 100px;
     }
     .past-event {
       margin-top: 0;
-      padding-top: 100px;
     }
   }
 }

@@ -2,17 +2,20 @@ import React from 'react';
 import Logo from '../logo/Logo';
 import BannerArrow from '../banner-arrow/Banner-arrow';
 import {Loader} from '../../utils/helpers'
+import PastEventHeader from '../past-event-header/PastEventHeader';
 
 const stickyHeader = () => {
     $(function(){
-        $(window).scroll(function(){
-            var winTop = $(window).scrollTop();
-            if(winTop >= 100){
+        var sectionBannerTop = $('.section-banner').offset().top;
+
+        $(window).on('scroll',function(){
+            if( $(window).scrollTop() > sectionBannerTop ) {
                 $("body").addClass("sticky-header");
-            }else{
+            } else {
                 $("body").removeClass("sticky-header");
-            }//if-else
-        });//win func.
+            }
+
+        });
     });//ready func.
 };
 
@@ -27,6 +30,7 @@ class Header extends React.Component{
                 <div id="main-loader"></div>
                 <Logo />
                 <BannerArrow/>
+                <PastEventHeader/>
             </section>
         )
     }

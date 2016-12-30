@@ -43,7 +43,6 @@ class Main extends React.Component {
         return (
             <div className="main-wrapper__inner">
                 <Header />
-                <PastEventHeader />
                 <SliderEvent events={this.upcomingEvents()}/>
                 <PastEventSection events={this.pastEvents()}/>
                 <FixedGradient />

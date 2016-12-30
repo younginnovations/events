@@ -1,6 +1,21 @@
 import React from 'react';
 
+const pastEventScroll = () => {
+    $(function () {
+        $(".arrow-past-wrap").click(function() {
+            $(".past-event-header").animate(
+                {
+                    top: "40"
+                }, 1000);
+        });
+    });
+} ;
+
 class PastEventHeader extends React.Component{
+    componentDidMount() {
+        pastEventScroll();
+    }
+
     render(){
         return(
             <div className="past-event-header">

@@ -1,4 +1,6 @@
 .past-event-header {
+  box-sizing: border-box;
+  height: 60px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -31,5 +33,9 @@
     &:hover, &:focus {
       color: darken(#556166, 10%);
     }
+  }
+  &.top {
+    background: none;
+    box-shadow: none;
   }
 }
