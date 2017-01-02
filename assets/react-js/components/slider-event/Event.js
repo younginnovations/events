@@ -1,5 +1,6 @@
 import React from "react";
 import DateBlock from "../date-block/Date-block";
+import {HideElementWithEmptyData} from "../../utils/helpers"
 
 const Event = ({event}) => {
     return (
@@ -13,9 +14,9 @@ const Event = ({event}) => {
                     <div className="date-block-wrap">
                         <DateBlock day={event.StartDay} month={event.StartMonth} year={event.StartYear}/>
                         <DateBlock day={event.EndDay} month={event.EndMonth} year={event.EndYear}/>
-                        <p className="text text-light">Venue: {event.Venue}</p>
-                        <div className="ghost-button">
-                            <button className="button button-border">View event in detail</button>
+                        <p className={"text text-light " + HideElementWithEmptyData(event.Venue)}>Venue: {event.Venue}</p>
+                        <div className={"ghost-button " + HideElementWithEmptyData(event.WebsiteLink)}>
+                            <a href={event.WebsiteLink} className="button button-border">View event in detail</a>
                         </div>
                     </div>
                 </div>

@@ -665,6 +665,8 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _helpers = require("../../utils/helpers");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -695,13 +697,13 @@ var PastEventInfo = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     "p",
-                    { className: "text" },
+                    { className: "text " + (0, _helpers.HideElementWithEmptyData)(this.props.event.Venue) },
                     "Venue: ",
                     this.props.event.Venue
                 ),
                 _react2.default.createElement(
                     "div",
-                    { className: "ghost-button" },
+                    { className: "ghost-button " + (0, _helpers.HideElementWithEmptyData)(this.props.event.WebsiteLink) },
                     _react2.default.createElement(
                         "a",
                         { href: this.props.event.WebsiteLink, className: "button button-border" },
@@ -717,7 +719,7 @@ var PastEventInfo = function (_React$Component) {
 
 exports.default = PastEventInfo;
 
-},{"react":335}],12:[function(require,module,exports){
+},{"../../utils/helpers":19,"react":335}],12:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -923,6 +925,8 @@ var _DateBlock = require("../date-block/Date-block");
 
 var _DateBlock2 = _interopRequireDefault(_DateBlock);
 
+var _helpers = require("../../utils/helpers");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Event = function Event(_ref) {
@@ -954,16 +958,16 @@ var Event = function Event(_ref) {
                     _react2.default.createElement(_DateBlock2.default, { day: event.EndDay, month: event.EndMonth, year: event.EndYear }),
                     _react2.default.createElement(
                         "p",
-                        { className: "text text-light" },
+                        { className: "text text-light " + (0, _helpers.HideElementWithEmptyData)(event.Venue) },
                         "Venue: ",
                         event.Venue
                     ),
                     _react2.default.createElement(
                         "div",
-                        { className: "ghost-button" },
+                        { className: "ghost-button " + (0, _helpers.HideElementWithEmptyData)(event.WebsiteLink) },
                         _react2.default.createElement(
-                            "button",
-                            { className: "button button-border" },
+                            "a",
+                            { href: event.WebsiteLink, className: "button button-border" },
                             "View event in detail"
                         )
                     )
@@ -975,7 +979,7 @@ var Event = function Event(_ref) {
 
 exports.default = Event;
 
-},{"../date-block/Date-block":3,"react":335}],16:[function(require,module,exports){
+},{"../../utils/helpers":19,"../date-block/Date-block":3,"react":335}],16:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1111,6 +1115,7 @@ _reactDom2.default.render(_react2.default.createElement(_Main2.default, null), d
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.HideElementWithEmptyData = HideElementWithEmptyData;
 var Loader = exports.Loader = {
     show: function show(reference) {
         if ($(reference).find('#loader').length === 0) {
@@ -1123,6 +1128,12 @@ var Loader = exports.Loader = {
         });
     }
 };
+
+function HideElementWithEmptyData(data) {
+    if (!data) {
+        return 'hide';
+    } else return 'show';
+}
 
 },{}],20:[function(require,module,exports){
 /*!

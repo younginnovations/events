@@ -27,3 +27,9 @@ export let Loader = {
             });
     }
 };
+
+export function HideElementWithEmptyData(data) {
+    if (!data) {
+        return 'hide';
+    }else return 'show';
+}
