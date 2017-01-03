@@ -8,12 +8,32 @@ const pastEventScroll = () => {
                     top: "40"
                 }, 1000);
         });
+
+        var sectionSliderTop = $(".section-slider").offset().top;
+        $(window).on('scroll',function() {
+            if ($(window).scrollTop() < sectionSliderTop) {
+                // $(".past-event-header").animate(
+                //     {
+                //         top: "auto"
+                //     }, 1000);
+                $(".past-event-header").css("top", "auto");
+                $(".section-banner").removeClass('active');
+            }
+            else {
+                // $(".past-event-header").animate(
+                //     {
+                //         top: "40"
+                //     }, 1000);
+                $(".past-event-header").css("top", "40px");
+                $(".section-banner").addClass('active');
+            }
+        });
     });
 } ;
 
 class PastEventHeader extends React.Component{
     componentDidMount() {
-        // pastEventScroll();
+        pastEventScroll();
     }
 
     render(){

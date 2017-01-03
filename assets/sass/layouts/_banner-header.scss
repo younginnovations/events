@@ -1,17 +1,19 @@
 .main-wrapper {
   position: relative;
   transition: all 1s ease-in-out;
+  padding-top: 80vh;
 }
 
 .section-banner {
   height: 80vh;
   background-image: radial-gradient(circle at 50% 0, #fcfcfc, #f8f8f8);
   box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.5);
-  position: relative;
   width: 100%;
   z-index: 5;
   transition: all 1s ease-in-out;
   display: table;
+  position: fixed;
+  top: 0;
 }
 
 .logo-block {
@@ -102,4 +104,8 @@
     margin: 0 auto;
     transform: rotate(-45deg);
   }
+}
+
+.active .arrow-wrap .arrow-icon {
+  transform: translateY(-28px) rotate(135deg)
 }

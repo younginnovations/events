@@ -1137,7 +1137,7 @@ body {
 }
 
 body.sticky-header .main-wrapper {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 body.sticky-header .section-banner {
@@ -1254,6 +1254,7 @@ body.sticky-header .past-event {
   position: relative;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+  padding-top: 80vh;
 }
 
 .section-banner {
@@ -1261,12 +1262,13 @@ body.sticky-header .past-event {
   background-image: -webkit-radial-gradient(50% 0, circle, #fcfcfc, #f8f8f8);
   background-image: radial-gradient(circle at 50% 0, #fcfcfc, #f8f8f8);
   box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.5);
-  position: relative;
   width: 100%;
   z-index: 5;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   display: table;
+  position: fixed;
+  top: 0;
 }
 
 .logo-block {
@@ -1381,16 +1383,22 @@ body.sticky-header .past-event {
   transform: rotate(-45deg);
 }
 
+.active .arrow-wrap .arrow-icon {
+  -webkit-transform: translateY(-28px) rotate(135deg);
+  transform: translateY(-28px) rotate(135deg);
+}
+
 .past-event-header {
+  background: #f8f8f8;
   box-sizing: border-box;
   height: 60px;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  background: #f8f8f8;
-  box-shadow: 0 -2px 40px 0 rgba(0, 0, 0, 0.5);
   padding: 22px 30px;
+  -webkit-transition: background 0.5s linear;
+  transition: background 0.5s linear;
   z-index: 4;
 }
 
@@ -1427,6 +1435,14 @@ body.sticky-header .past-event {
 .past-event-header.top {
   background: none;
   box-shadow: none;
+}
+
+.active .past-event-header {
+  background: none;
+  box-shadow: none;
+  left: auto;
+  right: 0;
+  width: 160px;
 }
 
 .section-slider {
@@ -1488,6 +1504,10 @@ body.sticky-header .past-event {
   opacity: 0.22;
 }
 
+.carousel .control-dots {
+  z-index: 4;
+}
+
 .slider-wrapper.axis-horizontal {
   height: 100%;
 }
@@ -1546,6 +1566,7 @@ body.sticky-header .past-event {
   background-color: #bf8b38;
   overflow: hidden;
   position: relative;
+  height: 240px;
 }
 
 .past-event__image picture {
@@ -1580,12 +1601,6 @@ body.sticky-header .past-event {
 
 .past-event__info .ghost-button {
   margin-top: 20px;
-}
-
-@media all and (min-width: 420px) {
-  .past-event__image {
-    height: 240px;
-  }
 }
 
 @media all and (min-width: 600px) {
@@ -1624,6 +1639,9 @@ body.sticky-header .past-event {
   .past-event__blocklist:nth-of-type(2n) {
     padding-left: 40px;
   }
+  .past-event__blocklist:nth-of-type(2n) .date-block:nth-last-of-type(3) {
+    margin-left: 0;
+  }
   .past-event__summary {
     display: -webkit-box;
     display: flex;
@@ -1633,6 +1651,9 @@ body.sticky-header .past-event {
   }
   .past-event__summary h2 {
     font: 30px "OpenSansBold";
+  }
+  .past-event__summary .date-block:nth-last-of-type(3) {
+    margin-left: -180px;
   }
 }
 
@@ -1666,7 +1687,6 @@ body.sticky-header .past-event {
   left: 0;
   width: 100%;
   height: 178px;
-  display: none;
 }
 
 .date-block {
@@ -1775,6 +1795,21 @@ body.sticky-header .past-event {
 
 /*# sourceMappingURL=app.css.map */
 
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
 /*# sourceMappingURL=app.css.map */
 /*# sourceMappingURL=app.css.map */
 /*# sourceMappingURL=app.css.map */

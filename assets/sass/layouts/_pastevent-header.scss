@@ -1,13 +1,13 @@
 .past-event-header {
+  background: $past-header-background;
   box-sizing: border-box;
   height: 60px;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  background: $past-header-background;
-  box-shadow: 0 -2px 40px 0 rgba(0, 0, 0, 0.5);
   padding: 22px 30px;
+  transition: background 0.5s linear;
   z-index: 4;
   @include e('inner') {
     font-family: $font-Bold;
@@ -39,3 +39,12 @@
     box-shadow: none;
   }
 }
+
+.active .past-event-header {
+  background: none;
+  box-shadow: none;
+  left: auto;
+  right: 0;
+  width: 160px;
+}
+

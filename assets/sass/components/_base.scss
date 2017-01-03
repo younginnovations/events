@@ -12,7 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   &.sticky-header {
     .main-wrapper {
-      margin-top: 100px;
+      padding-top: 100px;
     }
     .section-banner {
       height: 100px;
@@ -21,9 +21,6 @@ body {
           margin-left: -90%;
         }
       }
-      //.arrow-wrap .arrow-icon {
-      //  transform: translateY(-28px) rotate(135deg)
-      //}
       .logo-block {
         @include e('inner'){
           border: solid 6px #556166;
