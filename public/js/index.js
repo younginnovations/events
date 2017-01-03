@@ -349,7 +349,7 @@ var Header = function (_React$Component) {
     _createClass(Header, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            stickyHeader();
+            // stickyHeader();
             _helpers.Loader.show('#main-loader');
         }
     }, {
@@ -572,7 +572,7 @@ var PastEventHeader = function (_React$Component) {
     _createClass(PastEventHeader, [{
         key: "componentDidMount",
         value: function componentDidMount() {
-            pastEventScroll();
+            // pastEventScroll();
         }
     }, {
         key: "render",

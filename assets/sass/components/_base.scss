@@ -21,9 +21,9 @@ body {
           margin-left: -90%;
         }
       }
-      .arrow-wrap .arrow-icon {
-        transform: translateY(-28px) rotate(135deg)
-      }
+      //.arrow-wrap .arrow-icon {
+      //  transform: translateY(-28px) rotate(135deg)
+      //}
       .logo-block {
         @include e('inner'){
           border: solid 6px #556166;

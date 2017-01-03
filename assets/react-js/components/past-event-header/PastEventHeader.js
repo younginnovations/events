@@ -13,7 +13,7 @@ const pastEventScroll = () => {
 
 class PastEventHeader extends React.Component{
     componentDidMount() {
-        pastEventScroll();
+        // pastEventScroll();
     }
 
     render(){

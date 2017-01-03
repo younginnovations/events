@@ -21,7 +21,7 @@ const stickyHeader = () => {
 
 class Header extends React.Component{
     componentDidMount() {
-        stickyHeader();
+        // stickyHeader();
         Loader.show('#main-loader');
     }
     render(){

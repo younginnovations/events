@@ -1,6 +1,5 @@
 .main-wrapper {
   position: relative;
-  margin-top: 80vh;
   transition: all 1s ease-in-out;
 }
 
@@ -8,9 +7,7 @@
   height: 80vh;
   background-image: radial-gradient(circle at 50% 0, #fcfcfc, #f8f8f8);
   box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   z-index: 5;
   transition: all 1s ease-in-out;
