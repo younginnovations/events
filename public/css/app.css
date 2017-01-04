@@ -1137,11 +1137,11 @@ body {
 }
 
 body.sticky-header .main-wrapper {
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
 body.sticky-header .section-banner {
-  height: 100px;
+  height: 120px;
 }
 
 body.sticky-header .section-banner .logo-block > div {
@@ -1151,10 +1151,10 @@ body.sticky-header .section-banner .logo-block > div {
 body.sticky-header .section-banner .logo-block__inner {
   border: solid 6px #556166;
   padding: 10px;
-  -webkit-transform: scale(0.5);
-  transform: scale(0.5);
-  -webkit-backface-visibility: initial;
-  backface-visibility: initial;
+  -webkit-transform: perspective(1px) scale(0.65);
+  transform: perspective(1px) scale(0.65);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 body.sticky-header .section-banner .logo-block__sub-title {
@@ -1164,8 +1164,8 @@ body.sticky-header .section-banner .logo-block__sub-title {
   position: relative;
 }
 
-body.sticky-header .section-slider {
-  height: 90vh;
+body.sticky-header .banner-arrow-block {
+  bottom: 20px;
 }
 
 body.sticky-header .past-event {
@@ -1337,11 +1337,13 @@ body.sticky-header .past-event {
   font-size: 12px;
   font-size: 0.75rem;
   padding: 15px 10px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   z-index: 2;
 }
 
 .banner-arrow-block p {
-  margin: 0;
+  margin: 0 0 2px;
   display: inline-block;
   position: relative;
 }
@@ -1352,7 +1354,7 @@ body.sticky-header .past-event {
   height: 14px;
   display: block;
   position: absolute;
-  top: -1px;
+  top: 0;
   left: -17px;
   background: url("../img/rotate-right.svg") no-repeat;
 }
@@ -1368,16 +1370,14 @@ body.sticky-header .past-event {
 }
 
 .arrow-wrap .arrow-icon {
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
-  -webkit-animation: arrows 2.8s 0.4s;
-  animation: arrows 2.8s 0.4s;
+  -webkit-animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
   border: 2px solid #556166;
   border-top: transparent;
   border-right: transparent;
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   margin: 0 auto;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -1386,6 +1386,56 @@ body.sticky-header .past-event {
 .active .arrow-wrap .arrow-icon {
   -webkit-transform: translateY(-28px) rotate(135deg);
   transform: translateY(-28px) rotate(135deg);
+  -webkit-animation: fadeOut 1s ease-in-out;
+  animation: fadeOut 1s ease-in-out;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .past-event-header {
@@ -1397,13 +1447,14 @@ body.sticky-header .past-event {
   left: 0;
   right: 0;
   padding: 22px 30px;
-  -webkit-transition: background 0.5s linear;
-  transition: background 0.5s linear;
   z-index: 4;
 }
 
 .past-event-header__inner {
   font-family: "OpenSansBold";
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: normal;
   text-align: right;
   text-transform: uppercase;
 }
@@ -1438,17 +1489,16 @@ body.sticky-header .past-event {
 }
 
 .active .past-event-header {
-  background: none;
-  box-shadow: none;
   left: auto;
   right: 0;
   width: 160px;
+  top: 40px;
 }
 
 .section-slider {
   background-color: #cb9d2e;
   position: relative;
-  height: 100vh;
+  height: 82vh;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
@@ -1487,7 +1537,7 @@ body.sticky-header .past-event {
 }
 
 .carousel .slide {
-  background: #bf8b38;
+  background: #ff5500;
 }
 
 .carousel .slide > figure {
@@ -1795,6 +1845,138 @@ body.sticky-header .past-event {
 
 /*# sourceMappingURL=app.css.map */
 
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app.css.map */
 /*# sourceMappingURL=app.css.map */
 /*# sourceMappingURL=app.css.map */
 /*# sourceMappingURL=app.css.map */

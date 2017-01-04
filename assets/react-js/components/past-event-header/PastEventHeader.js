@@ -2,29 +2,33 @@ import React from 'react';
 
 const pastEventScroll = () => {
     $(function () {
-        $(".arrow-past-wrap").click(function() {
-            $(".past-event-header").animate(
-                {
-                    top: "40"
-                }, 1000);
-        });
+        // $(".arrow-past-wrap").click(function() {
+        //     $(".past-event-header").animate(
+        //         {
+        //             top: "40"
+        //         }, 1000).queue(function(){
+        //         $(".section-banner").addClass('active');
+        //
+        //     });
+        // });
 
-        var sectionSliderTop = $(".section-slider").offset().top;
+        var sectionSliderTop = $(".section-slider").position().top;
+
         $(window).on('scroll',function() {
             if ($(window).scrollTop() < sectionSliderTop) {
-                // $(".past-event-header").animate(
-                //     {
-                //         top: "auto"
-                //     }, 1000);
-                $(".past-event-header").css("top", "auto");
+                // $(".past-event-header").stop().animate(
+                //         {
+                //             top: "auto"
+                //         }, 1000);
+                $(".past-event-header").stop().css("top", "auto");
                 $(".section-banner").removeClass('active');
             }
             else {
-                // $(".past-event-header").animate(
+                // $(".past-event-header").stop().animate(
                 //     {
                 //         top: "40"
                 //     }, 1000);
-                $(".past-event-header").css("top", "40px");
+                $(".past-event-header").stop().css("top", "40px");
                 $(".section-banner").addClass('active');
             }
         });

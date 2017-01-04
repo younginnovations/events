@@ -7,10 +7,11 @@
   left: 0;
   right: 0;
   padding: 22px 30px;
-  transition: background 0.5s linear;
   z-index: 4;
   @include e('inner') {
     font-family: $font-Bold;
+    @include font-size(12px);
+    line-height: normal;
     text-align: right;
     text-transform: uppercase;
     span {
@@ -41,10 +42,10 @@
 }
 
 .active .past-event-header {
-  background: none;
-  box-shadow: none;
   left: auto;
   right: 0;
   width: 160px;
+  top: 40px;
 }
+
 

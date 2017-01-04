@@ -1,7 +1,7 @@
 .section-slider {
   background-color: #cb9d2e;
   position: relative;
-  height: 100vh;
+  height: 82vh;
   transition: all 0.5s linear;
   > div {
     height: 100%;
@@ -33,7 +33,7 @@
     height: 100%;
   }
   .slide {
-    background: #bf8b38;
+    background: rgba(255, 85, 0,1);
     > figure {
       height: 100%;
       > div {
