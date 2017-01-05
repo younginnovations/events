@@ -1,23 +1,21 @@
 .past-event-header {
   background: $past-header-background;
-  box-sizing: border-box;
-  height: 60px;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 22px 30px;
+  padding: 20px 30px;
   z-index: 4;
   @include e('inner') {
     font-family: $font-Bold;
     @include font-size(12px);
     line-height: normal;
-    text-align: right;
+    text-align: center;
     text-transform: uppercase;
     span {
       display: inline-block;
       position: relative;
-      &:before{
+      &:before {
         content: '';
         width: 12px;
         height: 11px;
@@ -41,11 +39,61 @@
   }
 }
 
-.active .past-event-header {
-  left: auto;
-  right: 0;
-  width: 160px;
-  top: 40px;
+.active {
+  .past-event-header {
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    width: 160px;
+    margin: 0 auto;
+    padding: 0;
+    background: none;
+    text-align: center;
+    @include e(inner) {
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
 }
 
+@media only screen and (min-width: 480px) {
+  body.sticky-header {
+    .banner-arrow-block {
+      bottom: 10px;
+    }
+  }
+  .active {
+    .past-event-header {
+      top: 15px;
+      right: 40px;
+      left: auto;
+      padding: 20px;
+      background: none;
+      @include e(inner) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body.sticky-header {
+    .banner-arrow-block {
+      bottom: 25px;
+    }
+  }
+
+  .past-event-header {
+    @include e(inner) {
+      text-align: right;
+    }
+  }
+
+  .active {
+    .past-event-header {
+      top: 45px;
+    }
+  }
+}
 
