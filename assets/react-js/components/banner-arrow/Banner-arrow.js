@@ -3,13 +3,14 @@ import React, {Component} from "react";
 const arrowScroll = () => {
     //From css-tricks for smooth scrolling:
     $(function () {
-        $('a.arrow-wrap[href*=#]:not([href=#]),a.arrow-past-wrap[href*=#]:not([href=#])').click(function () {
+        $('a.arrow-wrap[href*=#]:not([href=#]),a.arrow-past-wrap[href*=#]:not([href=#])').on('click',function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
+                var target = $(this.hash),
+                    headerHeight = $('.section-banner').height() - 5;
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     $('html,body').animate({
-                        scrollTop: target.offset().top
+                        scrollTop: target.offset().top - headerHeight
                     }, 1000);
                     return false;
                 }

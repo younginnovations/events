@@ -39,6 +39,7 @@
   background-color: #bf8b38;
   overflow: hidden;
   position: relative;
+  height: 240px;
   picture {
     background-image: radial-gradient(circle at 50% 0, rgba(255, 196, 34, 0.78), rgba(255, 85, 0, 0.78));
     img {
@@ -69,12 +70,6 @@
   }
   .ghost-button {
     margin-top: 20px;
-  }
-}
-
-@media all and (min-width: 420px) {
-  .past-event__image {
-    height: 240px;
   }
 }
 
@@ -115,6 +110,11 @@
     box-sizing: border-box;
     &:nth-of-type(2n) {
       padding-left: 40px;
+      .date-block {
+        &:nth-last-of-type(3) {
+          margin-left: 0;
+        }
+      }
     }
   }
 
@@ -127,12 +127,9 @@
       font: 30px $font-Bold;
     }
     .date-block {
-      //&:first-of-type {
-      //  margin-left: -180px;
-      //}
-      //&:only-of-type {
-      //  margin-left: 0!important;
-      //}
+      &:nth-last-of-type(3) {
+        margin-left: -180px;
+      }
     }
   }
 }

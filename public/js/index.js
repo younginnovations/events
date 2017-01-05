@@ -132,13 +132,14 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var arrowScroll = function arrowScroll() {
     //From css-tricks for smooth scrolling:
     $(function () {
-        $('a.arrow-wrap[href*=#]:not([href=#]),a.arrow-past-wrap[href*=#]:not([href=#])').click(function () {
+        $('a.arrow-wrap[href*=#]:not([href=#]),a.arrow-past-wrap[href*=#]:not([href=#])').on('click', function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
+                var target = $(this.hash),
+                    headerHeight = $('.section-banner').height() - 5;
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     $('html,body').animate({
-                        scrollTop: target.offset().top
+                        scrollTop: target.offset().top - headerHeight
                     }, 1000);
                     return false;
                 }
@@ -325,10 +326,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var stickyHeader = function stickyHeader() {
     $(function () {
-        var sectionBannerTop = $('.section-banner').offset().top;
-
         $(window).on('scroll', function () {
-            if ($(window).scrollTop() > sectionBannerTop) {
+            if ($(window).scrollTop() > 0) {
                 $("body").addClass("sticky-header");
             } else {
                 $("body").removeClass("sticky-header");
@@ -530,7 +529,7 @@ var PastEventBlock = function (_React$Component) {
 exports.default = PastEventBlock;
 
 },{"../past-event-block-list/PastEventBlockList":7,"react":335}],9:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -538,7 +537,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -552,10 +551,34 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var pastEventScroll = function pastEventScroll() {
     $(function () {
-        $(".arrow-past-wrap").click(function () {
-            $(".past-event-header").animate({
-                top: "40"
-            }, 1000);
+        // $(".arrow-past-wrap").click(function() {
+        //     $(".past-event-header").animate(
+        //         {
+        //             top: "40"
+        //         }, 1000).queue(function(){
+        //         $(".section-banner").addClass('active');
+        //
+        //     });
+        // });
+
+        var sectionSliderTop = $(".section-slider").position().top;
+
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop() < sectionSliderTop) {
+                // $(".past-event-header").stop().animate(
+                //         {
+                //             top: "auto"
+                //         }, 1000);
+                $(".past-event-header").stop().css("top", "auto");
+                $(".section-banner").removeClass('active');
+            } else {
+                // $(".past-event-header").stop().animate(
+                //     {
+                //         top: "40"
+                //     }, 1000);
+                $(".past-event-header").stop().css("top", "40px");
+                $(".section-banner").addClass('active');
+            }
         });
     });
 };
@@ -570,26 +593,26 @@ var PastEventHeader = function (_React$Component) {
     }
 
     _createClass(PastEventHeader, [{
-        key: "componentDidMount",
+        key: 'componentDidMount',
         value: function componentDidMount() {
             pastEventScroll();
         }
     }, {
-        key: "render",
+        key: 'render',
         value: function render() {
             return _react2.default.createElement(
-                "div",
-                { className: "past-event-header" },
+                'div',
+                { className: 'past-event-header' },
                 _react2.default.createElement(
-                    "div",
-                    { className: "past-event-header__inner" },
+                    'div',
+                    { className: 'past-event-header__inner' },
                     _react2.default.createElement(
-                        "a",
-                        { className: "arrow-past-wrap", href: "#past-section" },
+                        'a',
+                        { className: 'arrow-past-wrap', href: '#past-section' },
                         _react2.default.createElement(
-                            "span",
-                            { className: "icon" },
-                            "Past events"
+                            'span',
+                            { className: 'icon' },
+                            'Past events'
                         )
                     )
                 )

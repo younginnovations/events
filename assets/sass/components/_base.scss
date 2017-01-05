@@ -12,24 +12,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
   &.sticky-header {
     .main-wrapper {
-      margin-top: 100px;
+      padding-top: 120px;
     }
     .section-banner {
-      height: 100px;
+      height: 120px;
       .logo-block {
         > div {
           margin-left: -90%;
         }
       }
-      .arrow-wrap .arrow-icon {
-        transform: translateY(-28px) rotate(135deg)
-      }
       .logo-block {
         @include e('inner'){
           border: solid 6px #556166;
           padding: 10px;
-          transform: scale(0.5);
-          backface-visibility: initial;
+          transform: perspective(1px) scale(0.65);
+          backface-visibility: hidden;
         }
         @include e('sub-title'){
           opacity: 0;
@@ -39,8 +36,8 @@ body {
         }
       }
     }
-    .section-slider {
-      height: 90vh;
+    .banner-arrow-block {
+      bottom: 20px;
     }
     .past-event {
       margin-top: 0;

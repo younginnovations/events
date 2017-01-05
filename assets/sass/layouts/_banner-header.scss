@@ -1,20 +1,19 @@
 .main-wrapper {
   position: relative;
-  margin-top: 80vh;
   transition: all 1s ease-in-out;
+  padding-top: 80vh;
 }
 
 .section-banner {
   height: 80vh;
   background-image: radial-gradient(circle at 50% 0, #fcfcfc, #f8f8f8);
   box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 5;
   transition: all 1s ease-in-out;
   display: table;
+  position: fixed;
+  top: 0;
 }
 
 .logo-block {
@@ -69,9 +68,10 @@
   font-family: $font-Bold;
   @include font-size(12px);
   padding: 15px 10px;
+  transition: all 0.5s ease;
   z-index: 2;
   p {
-    margin: 0;
+    margin: 0 0 2px;
     display: inline-block;
     position: relative;
     &:before {
@@ -80,7 +80,7 @@
       height: 14px;
       display: block;
       position: absolute;
-      top: -1px;
+      top: 0;
       left: -17px;
       background: url('../img/rotate-right.svg') no-repeat;
     }
@@ -95,14 +95,42 @@
     color: darken(#556166, 10%);
   }
   .arrow-icon {
-    animation-delay: 3s;
-    animation: arrows 2.8s 0.4s;
+    animation: fadeIn 1s ease-in-out;
     border: 2px solid #556166;
     border-top: transparent;
     border-right: transparent;
     display: block;
-    @include size(10px);
+    @include size(8px);
     margin: 0 auto;
     transform: rotate(-45deg);
   }
+}
+
+.active .arrow-wrap .arrow-icon {
+  transform: translateY(-28px) rotate(135deg);
+  animation: fadeOut 1s ease-in-out;
+}
+
+@-webkit-keyframes fadeOut {
+  from { opacity: 0; }
+  50% { opacity: 0.5; }
+  to { opacity: 1;}
+}
+
+@keyframes fadeOut {
+  from { opacity: 0; }
+  50% { opacity: 0.5; }
+  to { opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  50% { opacity: 0.5; }
+  to { opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  50% { opacity: 0.5; }
+  to { opacity: 1;}
 }
