@@ -1,7 +1,7 @@
 .section-slider {
   background-color: #cb9d2e;
   position: relative;
-  height: 82vh;
+  height: 90vh;
   transition: all 0.5s linear;
   > div {
     height: 100%;
@@ -20,7 +20,11 @@
       h1 {
         color: $white;
         font-family: $font-Bold;
-        @include font-size(72px);
+        font-size: responsive;
+        min-font-size: 24px;
+        max-font-size: 72px;
+        lower-font-range: 320px;
+        upper-font-range: 1280px;
         line-height: 1.32;
         margin: 0 0 15px;
       }
@@ -47,12 +51,21 @@
   }
 }
 
-.carousel .control-dots {
-  z-index: 4;
+.carousel {
+  .control-dots {
+    bottom: 100px;
+    z-index: 4;
+  }
 }
 
 .slider-wrapper.axis-horizontal {
   height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-slider {
+    height: 84vh;
+  }
 }
 
 @media only screen and (min-width: 960px) {

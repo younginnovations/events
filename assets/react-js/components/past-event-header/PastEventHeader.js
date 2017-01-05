@@ -20,7 +20,7 @@ const pastEventScroll = () => {
                 //         {
                 //             top: "auto"
                 //         }, 1000);
-                $(".past-event-header").stop().css("top", "auto");
+                $(".past-event-header").stop();
                 $(".section-banner").removeClass('active');
             }
             else {
@@ -28,7 +28,7 @@ const pastEventScroll = () => {
                 //     {
                 //         top: "40"
                 //     }, 1000);
-                $(".past-event-header").stop().css("top", "40px");
+                $(".past-event-header").stop();
                 $(".section-banner").addClass('active');
             }
         });
