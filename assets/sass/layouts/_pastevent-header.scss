@@ -5,6 +5,7 @@
   left: 0;
   right: 0;
   padding: 20px 30px;
+  transition: all 0.3s ease-in-out;
   z-index: 4;
   @include e('inner') {
     font-family: $font-Bold;
@@ -50,6 +51,8 @@
     padding: 0;
     background: none;
     text-align: center;
+    transition: all 0.3s ease-in-out;
+    height: 0;
     @include e(inner) {
       text-align: center;
       margin-top: 10px;
