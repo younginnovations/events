@@ -1,11 +1,13 @@
 .past-event-header {
   background: $past-header-background;
+  box-sizing: border-box;
+  height: 60px;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 20px 30px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
   z-index: 4;
   @include e('inner') {
     font-family: $font-Bold;
@@ -42,17 +44,15 @@
 
 .active {
   .past-event-header {
+    padding: 0;
     top: 40px;
     left: 0;
     right: 0;
     bottom: auto;
-    width: 160px;
     margin: 0 auto;
-    padding: 0;
     background: none;
     text-align: center;
-    transition: all 0.3s ease-in-out;
-    height: 0;
+    transition: all 0.5s ease-in-out;
     @include e(inner) {
       text-align: center;
       margin-top: 10px;
@@ -63,15 +63,14 @@
 @media only screen and (min-width: 480px) {
   body.sticky-header {
     .banner-arrow-block {
-      bottom: 10px;
+      bottom: 8px;
     }
   }
   .active {
     .past-event-header {
+      padding: 20px 30px;
       top: 15px;
-      right: 40px;
       left: auto;
-      padding: 20px;
       background: none;
       @include e(inner) {
         margin-top: 0;
@@ -95,7 +94,7 @@
 
   .active {
     .past-event-header {
-      top: 45px;
+      top: 42px;
     }
   }
 }

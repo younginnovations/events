@@ -3,6 +3,7 @@
   position: relative;
   height: 90vh;
   transition: all 1s ease-in-out;
+  z-index: 1;
   > div {
     height: 100%;
   }
@@ -15,7 +16,7 @@
     text-align: center;
     text-transform: uppercase;
     @include e (inner) {
-      max-width: 560px;
+      max-width: 640px;
       margin: auto;
       h1 {
         color: $white;
@@ -53,7 +54,7 @@
 
 .carousel {
   .control-dots {
-    bottom: 100px;
+    bottom: 94px;
     z-index: 4;
   }
 }
@@ -67,10 +68,3 @@
     height: 84vh;
   }
 }
-
-@media only screen and (min-width: 960px) {
-  .carousel .control-dots {
-    bottom: 70px;
-  }
-}
-

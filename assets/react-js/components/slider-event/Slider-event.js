@@ -15,7 +15,7 @@ class SliderEvent extends React.Component {
 
     render() {
         return (
-            <section className="section-slider" id="content">
+            <section className="section section-slider" id="content">
                 {this.showCarousel()}
             </section>
         )

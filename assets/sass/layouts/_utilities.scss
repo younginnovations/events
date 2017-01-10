@@ -49,7 +49,7 @@
   font-size: 14px;
   line-height: 20px;
   font-style: italic;
-  margin: 25px 0 0;
+  margin: 15px 0 0;
   text-transform: initial;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .ghost-button {
-  margin-top: 30px;
+  margin-top: 20px;
   .button {
     @include button-size(13px, 26px, 14px, 1.2, 0px);
     position: relative;
