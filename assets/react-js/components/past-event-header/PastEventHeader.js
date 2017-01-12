@@ -2,16 +2,25 @@ import React from 'react';
 
 const pastEventScroll = () => {
     $(function () {
-        var sectionSliderTop = $(".section-slider").position().top + 38;
-        $(window).on('scroll',function() {
-            if ($(window).scrollTop() < sectionSliderTop) {
-                $(".past-event-header").stop();
-                $(".section-banner").removeClass('active');
-            }
-            else {
-                $(".past-event-header").stop();
-                $(".section-banner").addClass('active');
-            }
+
+        function SlideTop() {
+            var sectionSliderTop = $(".section-slider").position().top + 20;
+            $(window).on('scroll', function () {
+                if ($(window).scrollTop() < sectionSliderTop) {
+                    $(".past-event-header").stop();
+                    $(".section-banner").removeClass('active');
+                }
+                else {
+                    $(".past-event-header").stop();
+                    $(".section-banner").addClass('active');
+                }
+            });
+        }
+
+        SlideTop();
+
+        $(window).resize(function () {
+            SlideTop();
         });
     });
 } ;
