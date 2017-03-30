@@ -1078,6 +1078,11 @@ var SliderEvent = function (_React$Component) {
             return _react2.default.createElement(
                 "section",
                 { className: "section section-slider", id: "content" },
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "There is no Upcoming Event"
+                ),
                 this.showCarousel()
             );
         }
