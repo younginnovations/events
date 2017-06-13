@@ -679,13 +679,18 @@ var PastEventImage = function (_React$Component) {
     _createClass(PastEventImage, [{
         key: "render",
         value: function render() {
+
+            console.log(this.props.event);
+
+            var imagePath = "https://storage.googleapis.com/yipl-site/events/";
+
             return _react2.default.createElement(
                 "div",
                 { className: "past-event__image" },
                 _react2.default.createElement(
                     "picture",
                     null,
-                    _react2.default.createElement("img", { src: this.props.event.ImageSrc, alt: "Event Image" })
+                    _react2.default.createElement("img", { src: imagePath + this.props.event.Image, alt: this.props.event.Image })
                 )
             );
         }
